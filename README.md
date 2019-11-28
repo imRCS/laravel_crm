@@ -12,14 +12,14 @@ Attention: These steps have been performed in a Windows environment. The install
 
 You can use containers or any other methods for the setup, but i'll only tell you how i've done it:
 
-- First of all, i have installed an Apache distribution containing MariaDB and PHP like [XAMPP](https://www.apachefriends.org/).
-- Then i've installed [Composer](https://getcomposer.org/) to manage dependencies. *Make sure to add composer to your Path environment variable.
+- First of all, install an Apache distribution containing MariaDB and PHP like [XAMPP](https://www.apachefriends.org/).
+- Then install [Composer](https://getcomposer.org/) to manage dependencies. *Make sure to add composer to your Path environment variable.
 - After installing Composer you must open a terminal and execute this command:
 
 ```
 composer global require laravel/installer
 ```
-- Open XAMPP and start the Apache server and the MySQL server. Now in your terminal go to the project folder (../laravel_crm/crm)and run:
+- Create the project folder, name it 'crm' or whatever and add all the files. Open XAMPP and start the Apache server and the MySQL server. Now in your terminal go to the project folder and run:
 ```
 php artisan migrate
 ```
@@ -29,8 +29,8 @@ php artisan serve
 - And you're good to go! Just use this url to go to the website:
 http://127.0.0.1:8000
 
-after that ou may have to add users manually. 
-These are the credentials of the default admin user: 
+After that you may have to add users manually. 
+These are the credentials of the default admin user (if it exists in the database): 
 E-Mail Address: administrador@mail.com
 Password: 12345678
 
