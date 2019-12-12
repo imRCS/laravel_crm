@@ -26,6 +26,7 @@ php artisan migrate
 ```
 php artisan serve
 ```
+- Make sure you have started the Apache and MySQL servers in XAMPP.
 - And you're good to go! Just use this url to go to the website:
 http://127.0.0.1:8000
 
