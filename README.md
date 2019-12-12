@@ -46,6 +46,10 @@ Note that you may face some problems in your installation. Just check that XAMPP
 - Fast overview over your own open tasks, leads etc
 - Global dashboard
 
+## Credits to
+
+- Creative Tim for this amazing template. https://www.creative-tim.com/product/paper-dashboard-2
+
 ### License
 
 This project is an open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
