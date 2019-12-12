@@ -38,13 +38,13 @@ Note that you may face some problems in your installation. Just check that XAMPP
 
 ## Features overview
 
-- Tasks management
+- Products management
 - Campaigns management
 - Role management (Create and update your own roles)
-- Easy configurable settings
-- Client overview (Keep easy track of open tasks for each client etc)
-- Fast overview over your own open tasks, leads etc
-- Global dashboard
+- Completely functional dashboard
+- Sales and income overview (Keep an easy record of each client's earnings,see the best selling products,etc)
+- Complete store webpage prototype.
+- Register new products, product visits and sales.
 
 ## Credits to
 
