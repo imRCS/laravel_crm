@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.adminLayout')
 
 @section('title')
 Edit-Registered | CRM
@@ -22,15 +22,19 @@ Edit-Registered | CRM
                                 {{ method_field('PUT') }}
 
                                 <div class="form-group">
-                                    <label>Name</label>
+                                    <label>Nombre</label>
                                     <input type="text" name='username' value="{{ $users->name }}" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Cambiar rol</label>
-                                    <p>rol anterior: - {{ $users->usertype }} </p>
-                                    <select name="usertype" class="form-control">
-                                        <option value="admin">- admin</option>
-                                        <option value="">- </option>
+                                    @if($users->is_admin)
+                                    <p>rol actual: admin</p>
+                                    @else
+                                    <p>rol actual: cliente</p>
+                                    @endif
+                                    <select name="is_admin" class="form-control">
+                                        <option value="1">admin</option>
+                                        <option value="0">cliente</option>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-success">Guardar</button>

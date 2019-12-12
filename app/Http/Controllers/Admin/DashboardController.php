@@ -19,9 +19,9 @@ class DashboardController extends Controller
     /* id viene dentro de la ruta '/role-edit/{id} */ 
     public function registeredit(Request $request, $id){
 
-        /*guardamos en una variable llamada users el...*/
-        $users = User::findOrFail($id);
-        return view('admin.register-edit')->with('users',$users);
+        /*guardamos en una variable llamada users el usuario de id $id*/
+        $user = User::findOrFail($id);
+        return view('admin.register-edit')->with('users',$user);
 
     }
 
@@ -31,11 +31,20 @@ class DashboardController extends Controller
 
         $users = User::find($id);
         $users->name = $request->input('username');
-        $users->usertype = $request->input('usertype');
+        $users->is_admin = $request->input('is_admin');
         $users->update();
 
         return redirect('/role-register')->with('status','Cambios guardados con exito');
 
+    }
+
+    /* funcion que permite eliminar un usuario de la base de datos */
+    public function registerdelete($id){
+
+        $users = User::findOrFail($id);
+        $users->delete();
+
+        return redirect('/role-register')->with('status','Usuario eliminado con exito');
     }
 
 }

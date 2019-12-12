@@ -29,7 +29,21 @@ class LoginController extends Controller
     // protected $redirectTo = '/home';
 
     /*Despues de que el usuario hace login se le envia a una pagina u otra dependiendo de si es administrador o no*/
-    protected function redirectTo(){
+  /*   protected function redirectTo(Request $request, $user) {
+        if ($user->is_admin) {
+            return redirect ('dashboard');
+        } else {
+            return redirect ('products');
+        }
+    } */
+    protected function redirectTo() {
+        if (Auth::user()->is_admin) {
+            return 'dashboard';
+        } else {
+            return 'products';
+        }
+    }
+    /* protected function redirectTo(){
 
         if(Auth::user()->usertype == 'admin'){
 
@@ -41,7 +55,7 @@ class LoginController extends Controller
 
         }
 
-    }
+    } */
 
     /**
      * Create a new controller instance.

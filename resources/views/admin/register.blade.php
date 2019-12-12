@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.adminLayout')
 
 @section('title')
 Registered roles| CRM
@@ -13,9 +13,9 @@ Registered roles| CRM
             <div class="card-header">
                 <h4 class="card-title">Roles registrados</h4>
                 @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
                 @endif
             </div>
             <div class="card-body">
@@ -25,7 +25,7 @@ Registered roles| CRM
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Usertype</th>
+                            <th>Rol</th>
                             <th>EDIT</th>
                             <th>DELETE</th>
                         </thread>
@@ -36,12 +36,21 @@ Registered roles| CRM
                                 <td>{{ $row->id }}</td>
                                 <td>{{ $row->name }}</td>
                                 <td>{{ $row->email }}</td>
-                                <td>- {{ $row->usertype }}</td>
+                                @if($row->is_admin)
+                                <td>admin</td>
+                                @else
+                                <td>cliente</td>
+                                @endif                            
                                 <td>
                                     <a href="/role-edit/{{ $row->id }}" class="btn btn-success">EDIT</a>
                                 </td>
                                 <td>
-                                    <a href="#" class="btn btn-danger">DELETE</a>
+                                    <form action="/role-delete/{{ $row->id }}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger">DELETE</button>
+                                    </form>
+
                                 </td>
                             </tr>
 

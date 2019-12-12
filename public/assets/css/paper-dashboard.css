@@ -4574,16 +4574,27 @@ License - nucleoapp.com/license/
   width: 100%;
 }
 
-.table-responsive {
+/* .table-responsive {
   overflow: scroll;
   padding-bottom: 10px;
+} */
+
+@media (max-width: 991px) {
+  .table-responsive {
+      width: 100%;
+      margin-bottom: 15px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      -webkit-overflow-scrolling: touch;
+  }
 }
 
 #tables .table-responsive {
   margin-bottom: 30px;
 }
 
-.table-hover>tbody>tr:hover {
+.tableff0000-hover>tbody>tr:hover {
   background-color: #f5f5f5;
 }
 
