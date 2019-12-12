@@ -28,14 +28,18 @@ Edit-Registered | CRM
                                 <div class="form-group">
                                     <label>Cambiar rol</label>
                                     @if($users->is_admin)
-                                    <p>rol actual: admin</p>
-                                    @else
-                                    <p>rol actual: cliente</p>
-                                    @endif
-                                    <select name="is_admin" class="form-control">
-                                        <option value="1">admin</option>
+                                    <select name="is_admin" class="form-control custom-select">
+                                        <option value="1" selected>admin</option>
                                         <option value="0">cliente</option>
                                     </select>
+                                    @else
+                                    <select name="is_admin" class="form-control custom-select">
+                                        <option value="0" selected>cliente</option>
+                                        <option value="1">admin</option>
+                                    </select>
+                                    @endif
+
+
                                 </div>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                                 <a href="/role-register" class="btn btn-danger">Cancelar</a>

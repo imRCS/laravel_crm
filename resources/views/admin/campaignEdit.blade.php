@@ -28,7 +28,7 @@ Edit-Campaigns | CRM
                                 <div class="form-group">
                                     <label>Ganancias objetivo</label>
                                     <div class="input-group">
-                                        <input type="number" name="expectedrevenue" class="form-control" value="{{ $campaign->expectedrevenue }}" step="any" required>
+                                        <input type="number" name="expectedrevenue" class="form-control" value="{{ $campaign->expectedrevenue }}" step="0.01" min="0" required>
                                         <div class="input-group-append">
                                             <span class="input-group-text">€</span>
                                         </div>

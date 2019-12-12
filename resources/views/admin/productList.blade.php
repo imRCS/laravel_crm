@@ -43,7 +43,7 @@ Productos | CRM
                         <div class="form-group col-md-2">
                             <label>Precio</label>
                             <div class="input-group">
-                                <input type="number" name="price" class="form-control" value="Precio" step="any" required>
+                                <input type="number" name="price" class="form-control" value="Precio" step="0.01" min="0"  required>
                                 <div class="input-group-append">
                                     <span class="input-group-text">€</span>
                                 </div>
@@ -138,7 +138,12 @@ Productos | CRM
                                     <a href="{{ url('product-edit/'.$data->id) }}" class="btn btn-success">EDIT</a>
                                 </td>
                                 <td class="text-right">
-                                    <a href="#" class="btn btn-danger">DELETE</a>
+                                <form action="/product-delete/{{ $data->id }}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger">DELETE</button>
+                                    </form>
+
                                 </td>
                             </tr>
                             @endforeach

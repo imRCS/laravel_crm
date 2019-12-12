@@ -35,7 +35,7 @@ Campañas | CRM
                         <div class="form-group col-md-4">
                             <label>Ganancias objetivo</label>
                             <div class="input-group">
-                                <input type="number" name="expectedrevenue" class="form-control" value="Precio" step="any" required>
+                                <input type="number" name="expectedrevenue" class="form-control" value="Precio" step="0.01" min="0" required>
                                 <div class="input-group-append">
                                     <span class="input-group-text">€</span>
                                 </div>

@@ -124,6 +124,8 @@ class DashboardMainpageController extends Controller
                 $ingresos = $ingresos + ($producto->sales * $producto->price);
             }
         }
+        $ingresos = number_format((float)$ingresos, 2, '.', '');
+
 
         $nProdVistos = 0;
         $productos = Product::all();

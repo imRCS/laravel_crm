@@ -47,6 +47,8 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::post('/save-product-admin', 'Admin\ProductListController@store');
     Route::get('/product-edit/{id}', 'Admin\ProductListController@productedit');
     Route::put('/product-edit-update/{id}', 'Admin\ProductListController@producteditupdate');
+    Route::delete('/product-delete/{id}', 'Admin\ProductListController@productdelete');
+    
 
     Route::get('/campaigns', 'Admin\CampaignController@index');
     Route::post('/save-campaign', 'Admin\CampaignController@store');

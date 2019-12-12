@@ -59,7 +59,7 @@ class ProductListController extends Controller
     /* funcion que permite cambiar los datos de un producto */
     public function producteditupdate(Request $request, $id)
     {
-        if (Product::find($id)->name != $request->name){
+        if (Product::find($id)->name != $request->name) {
 
             if (Product::where('name', $request->input('name'))->doesntExist()) {
 
@@ -68,30 +68,35 @@ class ProductListController extends Controller
                 $product->category = $request->input('category');
                 $product->price = $request->input('price');
                 $product->description = $request->input('description');
-    
+
                 $product->update();
-    
+
                 return redirect('/product-list')->with('status', 'Cambios guardados con exito');
-    
             } else {
 
                 return redirect('/product-list')->with('errorstatus', 'Error. Ya existe un producto con ese nombre. Cambie el nombre del producto.');
             }
-
-        }else{
+        } else {
 
             $product = Product::find($id);
-           
+
             $product->category = $request->input('category');
             $product->price = $request->input('price');
             $product->description = $request->input('description');
 
             $product->update();
 
-             return redirect('/product-list')->with('status', 'Cambios guardados con exito'); 
-
+            return redirect('/product-list')->with('status', 'Cambios guardados con exito');
         }
-        
-       
+    }
+
+    /* funcion que permite eliminar una campaña de la base de datos */
+    public function productdelete($id)
+    {
+
+        $product = Product::findOrFail($id);
+        $product->delete();
+
+        return redirect('/product-list')->with('status', 'Producto eliminado con éxito');
     }
 }

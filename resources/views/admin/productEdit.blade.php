@@ -38,7 +38,7 @@ Edit-Registered | CRM
                                 </div>
                                 <div class="form-group">
                                     <label>Precio</label>
-                                    <input type="number" step="any" name='price' value="{{ $product->price }}" class="form-control">
+                                    <input type="number"step="0.01" min="0" name='price' value="{{ $product->price }}" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Descripcion</label>
