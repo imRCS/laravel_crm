@@ -25,15 +25,14 @@ DB_PASSWORD=
 ```
 composer global require laravel/installer
 ```
-- Go to xampp/htdocs/ inside XAMPP installation foder. 
-- Create the project folder, name it 'crm' or whatever and add all the files. Open XAMPP and start the Apache server and the MySQL server. Now in your terminal go to the project folder and run:
+- Go to /htdocs inside XAMPP installation foder. 
+- Create the project folder, name it 'crm' or whatever and add all the files. Open XAMPP and start the Apache server and the MySQL server. Go to http://localhost/phpmyadmin/, create a database with the name crmdb and import the file crmdb.sql. Now in your terminal go to the project folder and run:
 ```
 php artisan migrate
 ```
 ```
 php artisan serve
 ```
-- Make sure you have started the Apache and MySQL servers in XAMPP.
 - And you're good to go! Just use this url to go to the website:
 http://127.0.0.1:8000
 
