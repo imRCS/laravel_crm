@@ -12,7 +12,7 @@ Attention: These steps have been performed in a Windows environment. The install
 
 You can use containers or any other methods for the setup, but i'll only tell you how i've done it:
 
-- First, install an Apache distribution containing MariaDB and PHP like [XAMPP] (https://www.apachefriends.org/). Configure your database according to this configuration:
+- First, install an Apache distribution containing MariaDB and PHP like [XAMPP](https://www.apachefriends.org/). Configure your database according to this configuration:
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=crmdb
