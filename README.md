@@ -12,13 +12,20 @@ Attention: These steps have been performed in a Windows environment. The install
 
 You can use containers or any other methods for the setup, but i'll only tell you how i've done it:
 
-- First of all, install an Apache distribution containing MariaDB and PHP like [XAMPP](https://www.apachefriends.org/).
+- First, install an Apache distribution containing MariaDB and PHP like [XAMPP] (https://www.apachefriends.org/). Configure your database according to this configuration:
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=crmdb
+DB_USERNAME=root
+DB_PASSWORD=
+ 
 - Then install [Composer](https://getcomposer.org/) to manage dependencies. *Make sure to add composer to your Path environment variable.
 - After installing Composer you must open a terminal and execute this command:
 
 ```
 composer global require laravel/installer
 ```
+- Go to xampp/htdocs/ inside XAMPP installation foder. 
 - Create the project folder, name it 'crm' or whatever and add all the files. Open XAMPP and start the Apache server and the MySQL server. Now in your terminal go to the project folder and run:
 ```
 php artisan migrate
