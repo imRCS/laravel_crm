@@ -36,9 +36,14 @@ php artisan serve
 - And you're good to go! Just use this url to go to the website:
 http://127.0.0.1:8000
 
-After that you may have to add users manually. 
-These are the credentials of the default admin user (if it exists in the database): 
+After that, you can register new users or login to the website with these user accounts:
+
+Credentials of the default admin user: 
 E-Mail Address: administrador@mail.com
+Password: 12345678
+
+Credentials of the default normal users: 
+E-Mail Address: ana@mail.com or pepe@mail.com
 Password: 12345678
 
 Note that you may face some problems in your installation. Just check that XAMPP is configured and installed correctly, add the corresponding route to your environment variable Path and make sure that the XAMPP's MySQL databse doesn't conflict with other  database management systems.
