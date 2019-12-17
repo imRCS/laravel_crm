@@ -117,7 +117,18 @@ The above copyright notice and this permission notice shall be included in all c
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
+            <li class="navbar-brand" style="{{ 'dashboard' != request()->path() ? 'display: none;' : '' }}">
+              <p>Dashboard</p>
+            </li>
+            <li class="navbar-brand" style="{{ 'campaigns' != request()->path() ? 'display: none;' : '' }}">
+              <p>Campañas</p>
+            </li>
+            <li class="navbar-brand" style="{{ 'product-list' != request()->path() ? 'display: none;' : '' }}">
+              <p>Productos</p>
+            </li>
+            <li class="navbar-brand" style="{{ 'role-register' != request()->path() ? 'display: none;' : '' }}">
+              <p>Usuarios</p>
+            </li>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
